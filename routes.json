@@ -1,0 +1,4 @@
+{
+    "/images/:id": "/images/:id?_embed=comments"
+  }
+  
