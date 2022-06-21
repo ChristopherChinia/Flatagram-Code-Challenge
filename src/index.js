@@ -5,6 +5,8 @@ let title = document.getElementById("card-title");
 let image = document.getElementById("card-image");
 //SallyOscarComment
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('form').addEventListener('submit', (e) => { //grab the form, then add an eventListener ('submit),
-        e.preventDefault() })
+    document.querySelector('form').addEventListener('submit', (e) => { 
+        e.preventDefault()
+        handleComment(e.target.comment.value)
+    })
 })
