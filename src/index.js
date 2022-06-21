@@ -5,5 +5,5 @@ let title = document.getElementById("card-title");
 let image = document.getElementById("card-image");
 //SallyOscarComment
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('form')
+    document.querySelector('form').addEventListener('submit', (e) => {})
 })
