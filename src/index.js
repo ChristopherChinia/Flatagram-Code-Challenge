@@ -10,3 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
         handleComment(e.target.comment.value)
     })
 })
+function handleComment(todo) {
+    let ul = document.createElement('li')
+}
