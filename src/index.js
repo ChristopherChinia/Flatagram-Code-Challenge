@@ -4,3 +4,14 @@ document.getElementById("like-button").addEventListener("click",()=>{// grab lik
     likes += 1;//add likes to it
     renderLikes();
 });
+fetch("http://localhost:3000/images/1")
+.then(response => response.json())
+.then(renderFlatagram);
+
+function renderFlatagram(data){
+    likes = data.likes;
+    renderLikes();
+}
+function renderLikes(){
+    document.getElementById("like-count").textContent=`${likes} likes`;
+}
