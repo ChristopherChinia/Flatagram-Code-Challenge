@@ -29,4 +29,15 @@ function renderFlatagram(data){
 }
 function renderLikes(){
     document.getElementById("like-count").textContent=`${likes} likes`;
+//SallyOscarComment
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('form').addEventListener('submit', (e) => { 
+        e.preventDefault()
+        handleComment(e.target.comment.value)
+    })
+})
+function handleComment(todo) {
+    let ul = document.createElement('li')
+    ul.textContent = todo
+    document.querySelector('#comments-list').appendChild(ul)
 }
