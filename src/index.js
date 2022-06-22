@@ -4,6 +4,7 @@ let title = document.getElementById("card-title");
 // capturing the image from html using id
 let image = document.getElementById("card-image");
 
+// fetchingImage
 fetch('http://localhost:3000/images/1') //fetch request to the json server
 .then(response => response.json())
 .then(function(data){
