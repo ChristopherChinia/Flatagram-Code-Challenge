@@ -30,6 +30,20 @@ function renderFlatagram(data){
 function renderLikes(){
     document.getElementById("like-count").textContent=`${likes} likes`;
 }
+//james comments
+function fetchComments(){
+    fetch('http://localhost:3000/images/1')
+    .then(res => res.json())
+    .then(obj => {
+        let array = obj.comments
+        array.forEach (element => {
+        let li = document.createElement('li')
+        li.textContent = element.content
+        document.querySelector('#comments-list').appendChild(li)
+    })
+})}
+   fetchComments()
+
 //SallyOscarComment
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('form').addEventListener('submit', (e) => { 
@@ -40,5 +54,5 @@ document.addEventListener('DOMContentLoaded', () => {
 function handleComment(todo) {
     let ul = document.createElement('li')
     ul.textContent = todo
-    document.querySelector('#comments-list').appendChild(ul)
+    document.querySelector('#comments-list').appendChild(ul).
 }
